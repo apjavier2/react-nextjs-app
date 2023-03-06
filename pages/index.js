@@ -31,7 +31,19 @@ export async function getStaticProps() {
     props: {
       meetups: DUMMY_MEETUPS,
     },
+    revalidate: 3600,
   };
 }
+
+//this will run server-side
+//this will run every request on this page
+// export async function getServerSideProps(context){
+//     const req = context.req;
+//     const res = context.res;
+
+//     return {
+//         props:DUMMY_MEETUPS,
+//     }
+// }
 
 export default HomePage;
