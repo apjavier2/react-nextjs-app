@@ -33,6 +33,7 @@ export async function getStaticPaths() {
 
   client.close();
 
+  //blocking/true: there are more valid pages
   return {
     fallback: "blocking",
     paths: meetups.map((meetup) => ({
